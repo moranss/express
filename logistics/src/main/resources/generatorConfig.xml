@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!-- 当前电脑的数据库驱动程序jar包的全路径 -->
+    <classPathEntry location="G:\mavenFiles\mysql\mysql-connector-java\5.1.47\mysql-connector-java-5.1.47.jar"/>
+
+    <context id="context" >
+        <commentGenerator  >
+            <property name="javaFileEncoding" value="UTF-8"/>
+            <property name="suppressAllComments" value="true" />
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+        <!--选择数据库的driverClass与connectionURL-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/express01?useUnicode=true&amp;characterEncoding=UTF-8" userId="root" password="123" />
+
+        <!--生成实体类 指定包名 以及生成的地址 （可以自定义地址，但是路径不存在不会自动创建  使用Maven生成在target目录下，会自动创建） -->
+        <javaModelGenerator targetPackage="org.bdqn.logistics.pojo" targetProject="D:/自选项目/logistics/src/main/java" >
+            <property name="enableSubPackages" value="true"/> <!-- 如果true，MBG会根据catalog和schema来生成子包。如果false就会直接用targetPackage属性。默认为false -->
+            <property name="trimStrings" value="true" /> <!-- 当数据库字段使用CHAR时，建议在<javaModelGenerator>中设 -->
+        </javaModelGenerator>
+
+        <!--生成SQLMAP文件 -->
+        <!--<sqlMapGenerator targetPackage="org.bdqn.logistics.dao"  targetProject="D:/自选项目/logistics/src/main/java" />-->
+
+        <!--&lt;!&ndash;生成Dao文件 可以配置 type="XMLMAPPER"生成xml的dao实现 &ndash;&gt;-->
+        <!--<javaClientGenerator targetPackage="com.yyaccp.itrip.dao" targetProject="E:/学习作业/itrip/src/main/java" type="XMLMAPPER" />-->
+
+        <table tableName="announcement" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="associated_msg" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+           </table>
+        <table tableName="customer" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="d_information" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="deliver" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="expresstype" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="carrier" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="item" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="itemtype" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="menu" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="menu_role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="order" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="outlibrary" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+         </table>
+        <table tableName="payment" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="problempieces" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="scanning" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="shifts" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="storage" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="transport" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="user" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="user_role" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="vehicle" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="w_entry" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="warehouse" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="jobs" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="employee" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="branches" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+        <table tableName="destination" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+               enableSelectByExample="false"   selectByExampleQueryId="false" >
+        </table>
+    </context>
+</generatorConfiguration>
